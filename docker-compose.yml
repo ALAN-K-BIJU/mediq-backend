@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  backend:
+    image: mediq-backend
+    container_name: mediq-backend-container
+    ports:
+      - "9090:9090"
+    build:
+      context: .
+    restart: unless-stopped
