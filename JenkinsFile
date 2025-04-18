@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'maven'  // Make sure you named it 'maven' in Jenkins Global Tools
+        maven 'maven'  // Ensure this name matches the Maven tool in Jenkins Global Tools
     }
 
     environment {
@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/ALAN-K-BIJU/mediq-backend.git'
+                git branch: 'main', url: 'https://github.com/ALAN-K-BIJU/mediq-backend.git'  // Make sure the branch is correct
             }
         }
 
