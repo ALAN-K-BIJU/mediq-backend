@@ -11,6 +11,12 @@ pipeline {
     }
 
     stages {
+        stage('Check Workspace') {
+            steps {
+                sh 'pwd'
+                sh 'ls -la'
+            }
+        }
         stage('Clone Code') {
             steps {
                 script {
